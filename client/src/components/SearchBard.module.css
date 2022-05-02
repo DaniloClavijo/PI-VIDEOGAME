@@ -1,0 +1,28 @@
+.input {
+    background-color: rgba(165, 192, 193, 0.925);
+    height: 1.9rem;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: rem;
+    font-family: cursive;
+    color :rgb(48, 23, 193)
+  }
+  .input:hover{
+    cursor: text;
+    background-color: rgb(48, 23, 193);
+    color:yellow   
+  }
+  .btn {
+    background-color: rgb(190, 237, 23);
+    border:none;
+    padding: 7px;
+    border-radius: 0px 10px 10px 0px;
+    font-family: cursive;
+    color: rgba(35, 9, 127, 0.801);
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background-color: rgb(48, 23, 193);
+    color:yellow;
+  }
+

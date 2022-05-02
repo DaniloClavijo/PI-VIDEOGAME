@@ -1,0 +1,39 @@
+.image{
+    border-radius: 60px;
+    object-fit: cover;
+}
+.card {
+    background-color: rgb(22, 4, 4);
+    max-width: 400px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right:  12px;
+    text-align: center;
+    border-radius: 10%;
+   
+    transition: transform 0.01s;
+    text-decoration: none;
+  }
+
+  .card:hover{
+    background:rgb(227, 238, 24);
+    filter: drop-shadow(10px 0 35px rgb(243, 221, 221));
+  }
+
+.h2 {
+ 
+    color :blue;
+    font-size : 18px;
+    font-family: cursive;
+    margin-top: 3px;
+    
+}
+
+.name {
+ 
+  font-family: cursive;
+  font-size: 25px;
+  color: rgba(180, 158, 231, 0.897);
+  
+}
+
