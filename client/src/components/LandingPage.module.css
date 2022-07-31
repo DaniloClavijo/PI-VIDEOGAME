@@ -1,0 +1,36 @@
+.background {
+
+    background-image: url('https://i.pinimg.com/originals/09/56/08/0956089226fe3fad0a9da14dcf82ae43.jpg');
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    background-size: cover;
+ 
+
+}
+
+.btn {
+
+    margin-top: 450px;
+    margin-right: 0px;
+    background-color: rgb(228, 224, 13);
+    border-color: #6e14ff98;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(8, 27, 34);
+    font-family: 'Franklin Gothic Medium';
+    padding: 10px;
+    letter-spacing: 2px;
+    border-radius: 60px;
+    width: 100px;
+
+}
+
+.btn:hover {
+    
+    background-color: rgb(117, 117, 117);
+    color: rgb(28, 42, 171);
+}
