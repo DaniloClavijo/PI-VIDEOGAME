@@ -1,17 +1,20 @@
 import axios from 'axios'
 // aca tendre las acciones , 
 //1er acccion traerme todos los videojuegos de la api y de la base de datos 
-
+import Swal from "sweetalert2";
 export function getVideogames (){
-
+  
     return async function(dispatch){
-
-        var json = await axios.get('http://localhost:3001/videogames');
-
-        return dispatch ({
-            type : 'GET_ALL_VIDEOGAMES', 
-            payload : json.data
-        })
+        try {
+            var json = await axios.get('http://localhost:3001/videogames');
+            return dispatch ({
+                type : 'GET_ALL_VIDEOGAMES', 
+                payload : json.data
+            });
+        } catch (error) {
+            console.log(error)
+            
+        }
     }
 }
 
@@ -98,7 +101,12 @@ export function getNameVidegames (name) {
         
         
     } catch (error) {
-        console.log(error)
+        Swal.fire({
+            icon: 'error',
+            title: 'Sorry!' ,
+            text: "This videogame does not exist for now, reload the page",
+            confirmButtonText:'ok' ,
+        });
         
     }
 }

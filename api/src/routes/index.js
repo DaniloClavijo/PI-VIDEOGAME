@@ -218,17 +218,20 @@ router.get('/videogames', async (req,res) => {
 
         
 
-        if(name){
+        if(!name){
             // requisito traer solamente los 15 videojuegos que coincidan con el nombre pasado por query uso un slice, ya que los videojuegos estan son objetos guardados en la posicion de un array . puedo decirle que me traiga desde que si encuentra , solo me traiga 15... 
-
-            let VgTitle =  TotalVgs.filter( el => el.name.toLowerCase().includes(name.toLowerCase())).slice(0,15)
+            res.json( TotalVgs)
             
+            
+        }else{
+            let VgTitle =  TotalVgs.filter( el => el.name.toLowerCase().includes(name.toLowerCase())).slice(0,15)
 
-            VgTitle.length ? res.status(200).json(VgTitle) : res.status(400).send('No se encuentran resultados que coincidan con ese nombre de Videojuego!')    
+            VgTitle.length > 0 ? res.json(VgTitle) 
+            : res.status(400).json({
+                status : "not found"
+            })
         }
-        else{
-            res.status(200).json(TotalVgs)  
-        }
+
         
     } catch (error) {
         console.log(error)

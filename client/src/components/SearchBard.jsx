@@ -32,10 +32,9 @@ function handleSubmit(e){
     e.preventDefault();
     if(!name){
         alert('No escribiste ningun nombre para buscar, escribe algo')
-        dispatch(getVideogames())
-        setName("") 
     } else{ 
         dispatch(getNameVidegames(name))
+        setName("") 
     }
 }
     return(
