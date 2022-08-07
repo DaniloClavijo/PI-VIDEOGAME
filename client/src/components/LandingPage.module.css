@@ -1,18 +1,32 @@
 .background {
 
     background-image: url('https://i.pinimg.com/originals/09/56/08/0956089226fe3fad0a9da14dcf82ae43.jpg');
-    overflow: hidden;
-    width: 100%;
-    height: 600px;
-    margin: 0;
-    padding: 0;
-    background-position: center center;
+    background-color: #cccccc;
+    height: 616px;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
- 
+    position: relative;
+    background-clip: padding-box;
+}
 
+@keyframes mymove{
+    from {
+        
+        margin-left: 70%;
+        width: 8%
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 8%;
+      }
 }
 
 .btn {
+    animation-duration: 2.5s;
+    animation-name: mymove; 
+    
 
     margin-top: 450px;
     margin-right: 0px;
